@@ -49,6 +49,7 @@ li {
   font-weight: 700;
   line-height: 24px;
   color: #0451C4;
+  cursor: pointer;
 }
 
 * {
@@ -554,9 +555,19 @@ nav li {
 }
 
 .event {
+  position: relative;
   background-color: #FAFAFA;
   display: flex;
   justify-content: center;
+  padding: 120px 16px 80px 16px;
+}
+.event__background {
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  top: 0;
+  right: 50%;
+  background-color: #FEDC2A;
 }
 .event__heading {
   position: absolute;
@@ -568,8 +579,8 @@ nav li {
   flex-direction: column;
   gap: 32px;
   background-color: white;
-  width: 1112px;
-  margin: 120px 16px 80px 16px;
+  max-width: 1112px;
+  width: 100%;
   padding: 75px 40px 64px 40px;
 }
 .event__middle {
@@ -577,6 +588,7 @@ nav li {
   justify-content: space-between;
   color: #525862;
   font-weight: 700;
+  align-items: center;
 }
 .event__bottom {
   display: flex;
@@ -591,7 +603,7 @@ nav li {
 .event__card {
   width: 100%;
   display: flex;
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.0784313725);
+  box-shadow: 0px 2px 8px rgba(0, 10, 24, 0.0784313725);
 }
 .event__card__img {
   height: 100%;
@@ -633,8 +645,14 @@ nav li {
   align-items: center;
 }
 .event__card__btndiv {
+  align-items: center;
   display: flex;
   justify-content: space-around;
+}
+.event__card__btndiv button {
+  display: none;
+  width: 50%;
+  height: 32px;
 }
 
 .calender {
@@ -681,6 +699,20 @@ nav li {
   background-color: #0451C4;
   color: white;
   border-radius: 21px;
+}
+.calender__mobilebtn {
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: none;
+  border: 1px solid #B8BABE;
+  cursor: pointer;
+}
+.calender__mobilebtn__day {
+  font-weight: 700;
+}
+.calender__mobilebtn__arrow {
+  color: #0451C4;
 }
 
 @media (max-width: 1112px) {
@@ -820,6 +852,10 @@ nav li {
   .tag__container {
     gap: 16px;
   }
+  .tag__sec {
+    padding: 8px 16px;
+    border-radius: 28px;
+  }
   .tab__div {
     gap: 16px;
   }
@@ -838,12 +874,12 @@ nav li {
   .event {
     display: flex;
     justify-content: center;
+    padding: 48px 16px;
   }
   .event__heading {
     top: -16px;
   }
   .event__container {
-    margin: 48px 16px;
     padding: 40px 16px;
   }
   .event__bottom {
@@ -856,7 +892,7 @@ nav li {
   .event__card {
     width: 100%;
     display: flex;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.0784313725);
+    box-shadow: 0px 2px 8px rgba(0, 10, 24, 0.0784313725);
   }
   .event__card__img {
     height: 156px;
@@ -867,5 +903,8 @@ nav li {
   .event__card__right {
     position: relative;
     width: 100%;
+  }
+  .event__card__btndiv button {
+    display: inline-block;
   }
 }/*# sourceMappingURL=main.css.map */

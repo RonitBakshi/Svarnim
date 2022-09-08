@@ -10,7 +10,10 @@ $grey: #80848B;
 $tab-grey: #D1D3D5;
 $footer-grey: rgba(255, 255, 255, 0.54);
 $dark-grey: #525862;
+$border-grey: #B8BABE;
+$yellow: #FEDC2A;
 $max-width: 500px;
+$box-shadow: 0px 2px 8px #000A1814;
 
 h1,h2 {
     font-family: 'Lora', serif;
@@ -31,26 +34,26 @@ li {
 
 .btn {
     &_primary {
-        background-color: #0451C4;
+        background-color: $navy-blue;
         width: 200px;
         min-height: 48px;
         border: none;
         font-weight: 700;
         font-size: 16px;
         line-height: 24px;
-        color: white;
+        color: $white;
         cursor: pointer;
 
         &--inactive {
-            background-color: #F0F5FB;
-            color: #0451C4;
+            background-color: $off-white;
+            color: $navy-blue;
         }
     }
 
     &_secondary {
         padding: 12px 16.5px;
-        border: 2px solid #0451C4;
-        color: #0451C4;
+        border: 2px solid $navy-blue;
+        color: $navy-blue;
         width: 200px;
         min-height: 48px;
         font-weight: 700;
@@ -66,7 +69,8 @@ li {
         font-size: 16px;
         font-weight: 700;
         line-height: 24px;
-        color: #0451C4;
+        color: $navy-blue;
+        cursor: pointer;
     }
 }
 
@@ -406,7 +410,7 @@ nav {
     height: 100%;
     width: 350px;
     padding: 24px;
-    box-shadow: 0px 2px 8px #000A1814;
+    box-shadow: $box-shadow;
 
     &__icon {
         font-size: 24px;
@@ -428,7 +432,7 @@ nav {
 .tabcard {
     height: 100%;
     width: 350px;
-    box-shadow: 0px 2px 8px #000A1814;
+    box-shadow: $box-shadow;
 
     &__container {
         display: flex;
@@ -467,7 +471,7 @@ nav {
     }
 
     p {
-        color: #80848B;
+        color: $grey;
     }
 }
 
@@ -622,9 +626,20 @@ nav {
 }
 
 .event {
+    position: relative;
     background-color: $event-background;
     display: flex;
     justify-content: center;
+    padding: 120px 16px 80px 16px;
+
+    &__background {
+        position: absolute;
+        width: 700px;
+        height: 700px;
+        top: 0;
+        right: 50%;
+        background-color: $yellow;
+    }
 
     &__heading {
         position: absolute;
@@ -636,9 +651,9 @@ nav {
         display: flex;
         flex-direction: column;
         gap: 32px;
-        background-color: white;
-        width: $mobile;
-        margin: 120px 16px 80px 16px;
+        background-color: $white;
+        max-width: $mobile;
+        width: 100%;
         padding: 75px 40px 64px 40px;
     }
 
@@ -647,6 +662,7 @@ nav {
         justify-content: space-between;
         color: $dark-grey;
         font-weight: 700;
+        align-items: center;
     }
 
     &__bottom {
@@ -664,7 +680,7 @@ nav {
     &__card  {
         width: 100%;
         display: flex;
-        box-shadow: 0px 2px 8px #00000014;
+        box-shadow: $box-shadow;
 
         &__img {
             height: 100%;
@@ -713,8 +729,15 @@ nav {
         }
 
         &__btndiv {
+            align-items: center;
             display: flex;
             justify-content: space-around;
+
+            button {
+                display: none;
+                width: 50%;
+                height: 32px;
+            }
         }
     }
 }
@@ -722,7 +745,7 @@ nav {
 .calender {
     min-width: max-content;
     padding: 8px;
-    box-shadow: 0px 2px 8px #000A1814;
+    box-shadow: $box-shadow;
 
     &__top {
         display: flex;
@@ -754,7 +777,7 @@ nav {
             font-size: 14px;
             font-weight: 700;
             line-height: 20px;
-            color: #80848B;
+            color: $grey;
         }
 
         &__date {
@@ -765,10 +788,27 @@ nav {
             line-height: 20px;
 
             &--active {
-                background-color: #0451C4;
-                color: white;
+                background-color: $navy-blue;
+                color: $white;
                 border-radius: 21px;
             }
+        }
+    }
+
+    &__mobilebtn {
+        gap: 8px;
+        padding: 6px 14px;
+        border-radius: 20px;
+        background: none;
+        border: 1px solid $border-grey;
+        cursor: pointer;
+
+        &__day {
+            font-weight: 700;
+        }
+
+        &__arrow {
+            color: $navy-blue;
         }
     }
 }
@@ -964,6 +1004,11 @@ nav {
         &__container {
             gap: 16px;
         }
+
+        &__sec {
+            padding: 8px 16px;
+            border-radius: 28px;  
+        }
     }
 
     .tab {
@@ -991,13 +1036,13 @@ nav {
     .event {
         display: flex;
         justify-content: center;
+        padding: 48px 16px;;
     
         &__heading {
             top: -16px;
         }
     
         &__container {
-            margin: 48px 16px;
             padding: 40px 16px;
         }
     
@@ -1013,7 +1058,7 @@ nav {
         &__card  {
             width: 100%;
             display: flex;
-            box-shadow: 0px 2px 8px #00000014;
+            box-shadow: $box-shadow;
     
             &__img {
                 height: 156px;
@@ -1024,6 +1069,12 @@ nav {
             &__right {
                 position: relative;
                 width: 100%;
+            }
+
+            &__btndiv {
+                button {
+                    display: inline-block;
+                }
             }
         }
     }
