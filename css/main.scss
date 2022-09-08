@@ -481,6 +481,11 @@ nav {
     flex-direction: column;
     gap: 24px;
 
+    &__background {
+        background-color: $event-background;
+        padding: 56px 32px;
+    }
+
     &__opening {
         height: 35px;
         margin-bottom: 13px;
@@ -991,6 +996,11 @@ nav {
     }
 
     .facts {
+        &__background {
+            background-color: transparent;
+            padding: 0;
+        }
+
         &__opening {
             height: 20px;
             margin-bottom: 8px;

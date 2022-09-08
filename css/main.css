@@ -410,6 +410,10 @@ nav li {
   flex-direction: column;
   gap: 24px;
 }
+.facts__background {
+  background-color: #FAFAFA;
+  padding: 56px 32px;
+}
 .facts__opening {
   height: 35px;
   margin-bottom: 13px;
@@ -840,6 +844,10 @@ nav li {
   .tabcard__container {
     align-items: center;
     gap: 24px;
+  }
+  .facts__background {
+    background-color: transparent;
+    padding: 0;
   }
   .facts__opening {
     height: 20px;
