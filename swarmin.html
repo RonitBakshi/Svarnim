@@ -11,6 +11,13 @@
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+
+    <!--
+        <link rel="stylesheet" href="css/carousel.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    -->
+
     <link rel="stylesheet" href="css/main.css">
 
     <title>Svarnim</title>
@@ -79,7 +86,7 @@
         </div>
     </div>
 
-    <div class="page">
+    <div class="section content">
         <div class="container">
             <div class="container__row">
                 <div class="container__row__div">
@@ -96,7 +103,7 @@
             <div>
                 <div class="scroll">
                     <div class="scroll__container">
-        
+
                         <div class="scrollcard">
                             <img src="/assets/card_img_1.png" alt="">
                             <h3 class="text--20">
@@ -117,6 +124,20 @@
                                 Spirituality in Science
                             </h3>
                         </div>
+                        
+                        <div class="scrollcard">
+                            <img src="/assets/card_img_1.png" alt="">
+                            <h3 class="text--20">
+                                Consultative Meeting on Svarnim Puducherry
+                            </h3>
+                        </div>
+        
+                        <div class="scrollcard">
+                            <img  src="assets/card_img_2.png" alt="">
+                            <h3 class="text--20">
+                                Intensive Training of Excellence in the 26th International
+                            </h3>
+                        </div>
         
                         <div class="scrollcard">
                             <img src="/assets/card_img_3.png" alt="">
@@ -124,28 +145,49 @@
                                 Spirituality in Science
                             </h3>
                         </div>
+
+                        <div class="scrollcard">
+                            <img src="/assets/card_img_1.png" alt="">
+                            <h3 class="text--20">
+                                Consultative Meeting on Svarnim Puducherry
+                            </h3>
+                        </div>
+        
+                        <div class="scrollcard">
+                            <img  src="assets/card_img_2.png" alt="">
+                            <h3 class="text--20">
+                                Intensive Training of Excellence in the 26th International
+                            </h3>
+                        </div>
+        
+                        <div class="scrollcard">
+                            <img src="/assets/card_img_3.png" alt="">
+                            <h3 class="text--20">
+                                Spirituality in Science
+                            </h3>
+                        </div>
+
+                        <div class="scrollcard">
+                            <img src="/assets/card_img_1.png" alt="">
+                            <h3 class="text--20">
+                                Consultative Meeting on Svarnim Puducherry
+                            </h3>
+                        </div>
                     </div>
 
                     <div class="scroll__nav desktop">
-                        <div>
-                            <div class="scroll__no scroll__no--active material-icons">
-                                horizontal_rule
-                            </div>
-                            <div class="scroll__no material-icons">
-                                horizontal_rule
-                            </div>
-                            <div class="scroll__no material-icons">
-                                horizontal_rule
-                            </div>
-                            <div class="scroll__no material-icons">
-                                horizontal_rule
-                            </div>
-                        </div>
+                        <ol class="scroll__indicator">
+                            <li class="scroll__li scroll__li--active"></li>
+                            <li class="scroll__li"></li>
+                            <li class="scroll__li"></li>
+                            <li class="scroll__li"></li>
+                        </ol>
+
                         <div class="scroll__btndiv">
-                            <button class="btn_primary btn_primary--inactive scroll__btn material-icons">
+                            <button class="btn_primary btn_primary--inactive scroll__btn material-icons" id="scroll-btn-prev" disabled>
                                 navigate_before
                             </button>
-                            <button class="btn_primary scroll__btn material-icons">
+                            <button class="btn_primary scroll__btn material-icons" id="scroll-btn-next">
                                 navigate_next
                             </button>
                         </div>
@@ -222,10 +264,10 @@
     
             <div class="tab__container">
                 <div class="tab__div">
-                    <p class="tab tab--active text--24">
+                    <p class="tab text--24" id="Ongoing-Initiatives">
                         Ongoing Initiatives
                     </p>
-                    <p class="tab text--24">
+                    <p class="tab tab--active text--24" id="All">
                         All Initiatives
                     </p>
                 </div>
@@ -233,51 +275,84 @@
 
             <div>
                 <div class="scroll">
-                    <div class="scroll__container">
-        
-                        <div class="scrollcard">
+                    <div class="scroll__container tab__elements">
+
+                        <div class="scrollcard" id="Ongoing-Initiatives">
                             <img src="/assets/initiative-1.png" alt="">
                             <h3 class="text--20">
                                 Rupantar-Zero Investment Innovation in Education (ZIIEI)
                             </h3>
                         </div>
         
-                        <div class="scrollcard">
-                            <img  src="assets/card_img_2.png" alt="">
+                        <div class="scrollcard" id="Ongoing-Initiatives">
+                            <img  src="assets/initiative-2.png" alt="">
                             <h3 class="text--20">
                                 Rupantar – Inclusion
                             </h3>
                         </div>
         
                         <div class="scrollcard">
-                            <img src="/assets/card_img_3.png" alt="">
+                            <img src="/assets/initiative-3.png" alt="">
                             <h3 class="text--20">
                                 ORC – Our Responsibility to Children
                             </h3>
                         </div>
 
+                        <div class="scrollcard" id="Ongoing-Initiatives">
+                            <img src="/assets/initiative-1.png" alt="">
+                            <h3 class="text--20">
+                                Rupantar-Zero Investment Innovation in Education (ZIIEI)
+                            </h3>
+                        </div>
+        
+                        <div class="scrollcard" id="Ongoing-Initiatives">
+                            <img  src="assets/initiative-2.png" alt="">
+                            <h3 class="text--20">
+                                Rupantar – Inclusion
+                            </h3>
+                        </div>
+        
+                        <div class="scrollcard">
+                            <img src="/assets/initiative-3.png" alt="">
+                            <h3 class="text--20">
+                                ORC – Our Responsibility to Children
+                            </h3>
+                        </div>
+
+                        <div class="scrollcard" id="Ongoing-Initiatives">
+                            <img src="/assets/initiative-1.png" alt="">
+                            <h3 class="text--20">
+                                Rupantar-Zero Investment Innovation in Education (ZIIEI)
+                            </h3>
+                        </div>
+        
+                        <div class="scrollcard" id="Ongoing-Initiatives">
+                            <img  src="assets/initiative-2.png" alt="">
+                            <h3 class="text--20">
+                                Rupantar – Inclusion
+                            </h3>
+                        </div>
+        
+                        <div class="scrollcard">
+                            <img src="/assets/initiative-3.png" alt="">
+                            <h3 class="text--20">
+                                ORC – Our Responsibility to Children
+                            </h3>
+                        </div>
                     </div>
 
                     <div class="scroll__nav desktop">
-                        <div>
-                            <div class="scroll__no scroll__no--active material-icons">
-                                horizontal_rule
-                            </div>
-                            <div class="scroll__no material-icons">
-                                horizontal_rule
-                            </div>
-                            <div class="scroll__no material-icons">
-                                horizontal_rule
-                            </div>
-                            <div class="scroll__no material-icons">
-                                horizontal_rule
-                            </div>
-                        </div>
+                        <ol class="scroll__indicator">
+                            <li class="scroll__li scroll__li--active"></li>
+                            <li class="scroll__li"></li>
+                            <li class="scroll__li"></li>
+                        </ol>
+
                         <div class="scroll__btndiv">
-                            <button class="btn_primary btn_primary--inactive scroll__btn material-icons">
+                            <button class="btn_primary btn_primary--inactive scroll__btn material-icons" id="scroll-btn-prev" disabled>
                                 navigate_before
                             </button>
-                            <button class="btn_primary scroll__btn material-icons">
+                            <button class="btn_primary scroll__btn material-icons" id="scroll-btn-next">
                                 navigate_next
                             </button>
                         </div>
@@ -287,7 +362,7 @@
         </div>
     </div>
 
-    <div class="widget">
+    <div class="section widget">
         <div class="widget__container">
             <h2 class="text--32">
                 Join us in our Initiatives
@@ -303,7 +378,7 @@
         </div>
     </div>
 
-    <div class="page">
+    <div class="section content">
         <div class="container">
             <div class="container__row">
                 <div class="container__row__div">
@@ -313,7 +388,7 @@
                     </h2>
                 </div>
             </div>
-    
+
             <div>
                 <div class="scroll">
                     <div class="scroll__container">
@@ -331,7 +406,7 @@
                                 Learn More
                             </button>
                         </div>
-    
+                        
                         <div class="bulletincard">
                             <button class="bulletincard__icon btn_primary btn_primary--inactive material-icons">
                                 campaign
@@ -345,8 +420,8 @@
                             <button class="btn_text">
                                 Learn More
                             </button>
-                        </div> 
-
+                        </div>
+                        
                         <div class="bulletincard">
                             <button class="bulletincard__icon btn_primary btn_primary--inactive material-icons">
                                 campaign
@@ -376,28 +451,141 @@
                                 Learn More
                             </button>
                         </div>
+                        
+                        <div class="bulletincard">
+                            <button class="bulletincard__icon btn_primary btn_primary--inactive material-icons">
+                                campaign
+                            </button>
+                            <h3 class="text--20">
+                                Launch of Handbook for Care-givers in Palliative Car...
+                            </h3>
+                            <p class="text--14">
+                                You can download, for the purpose of printing, the foldable original card here (PDF, 3.99 MB)
+                            </p>
+                            <button class="btn_text">
+                                Learn More
+                            </button>
+                        </div>
+                        
+                        <div class="bulletincard">
+                            <button class="bulletincard__icon btn_primary btn_primary--inactive material-icons">
+                                campaign
+                            </button>
+                            <h3 class="text--20">
+                                Launch of Handbook for Care-givers in Palliative Car...
+                            </h3>
+                            <p class="text--14">
+                                You can download, for the purpose of printing, the foldable original card here (PDF, 3.99 MB)
+                            </p>
+                            <button class="btn_text">
+                                Learn More
+                            </button>
+                        </div>
+
+                        <div class="bulletincard">
+                            <button class="bulletincard__icon btn_primary btn_primary--inactive material-icons">
+                                campaign
+                            </button>
+                            <h3 class="text--20">
+                                Launch of Handbook for Care-givers in Palliative Car...
+                            </h3>
+                            <p class="text--14">
+                                You can download, for the purpose of printing, the foldable original card here (PDF, 3.99 MB)
+                            </p>
+                            <button class="btn_text">
+                                Learn More
+                            </button>
+                        </div>
+                        
+                        <div class="bulletincard">
+                            <button class="bulletincard__icon btn_primary btn_primary--inactive material-icons">
+                                campaign
+                            </button>
+                            <h3 class="text--20">
+                                Launch of Handbook for Care-givers in Palliative Car...
+                            </h3>
+                            <p class="text--14">
+                                You can download, for the purpose of printing, the foldable original card here (PDF, 3.99 MB)
+                            </p>
+                            <button class="btn_text">
+                                Learn More
+                            </button>
+                        </div>
+                        
+                        <div class="bulletincard">
+                            <button class="bulletincard__icon btn_primary btn_primary--inactive material-icons">
+                                campaign
+                            </button>
+                            <h3 class="text--20">
+                                Launch of Handbook for Care-givers in Palliative Car...
+                            </h3>
+                            <p class="text--14">
+                                You can download, for the purpose of printing, the foldable original card here (PDF, 3.99 MB)
+                            </p>
+                            <button class="btn_text">
+                                Learn More
+                            </button>
+                        </div>
+
+                        <div class="bulletincard">
+                            <button class="bulletincard__icon btn_primary btn_primary--inactive material-icons">
+                                campaign
+                            </button>
+                            <h3 class="text--20">
+                                Launch of Handbook for Care-givers in Palliative Car...
+                            </h3>
+                            <p class="text--14">
+                                You can download, for the purpose of printing, the foldable original card here (PDF, 3.99 MB)
+                            </p>
+                            <button class="btn_text">
+                                Learn More
+                            </button>
+                        </div>
+                        
+                        <div class="bulletincard">
+                            <button class="bulletincard__icon btn_primary btn_primary--inactive material-icons">
+                                campaign
+                            </button>
+                            <h3 class="text--20">
+                                Launch of Handbook for Care-givers in Palliative Car...
+                            </h3>
+                            <p class="text--14">
+                                You can download, for the purpose of printing, the foldable original card here (PDF, 3.99 MB)
+                            </p>
+                            <button class="btn_text">
+                                Learn More
+                            </button>
+                        </div>
+                        
+                        <div class="bulletincard">
+                            <button class="bulletincard__icon btn_primary btn_primary--inactive material-icons">
+                                campaign
+                            </button>
+                            <h3 class="text--20">
+                                Launch of Handbook for Care-givers in Palliative Car...
+                            </h3>
+                            <p class="text--14">
+                                You can download, for the purpose of printing, the foldable original card here (PDF, 3.99 MB)
+                            </p>
+                            <button class="btn_text">
+                                Learn More
+                            </button>
+                        </div>
+                        
                     </div>
 
                     <div class="scroll__nav desktop">
-                        <div>
-                            <div class="scroll__no scroll__no--active material-icons">
-                                horizontal_rule
-                            </div>
-                            <div class="scroll__no material-icons">
-                                horizontal_rule
-                            </div>
-                            <div class="scroll__no material-icons">
-                                horizontal_rule
-                            </div>
-                            <div class="scroll__no material-icons">
-                                horizontal_rule
-                            </div>
-                        </div>
+                        <ol class="scroll__indicator">
+                            <li class="scroll__li scroll__li--active"></li>
+                            <li class="scroll__li"></li>
+                            <li class="scroll__li"></li>
+                        </ol>
+
                         <div class="scroll__btndiv">
-                            <button class="btn_primary btn_primary--inactive scroll__btn material-icons">
+                            <button class="btn_primary btn_primary--inactive scroll__btn material-icons" id="scroll-btn-prev" disabled>
                                 navigate_before
                             </button>
-                            <button class="btn_primary scroll__btn material-icons">
+                            <button class="btn_primary scroll__btn material-icons" id="scroll-btn-next">
                                 navigate_next
                             </button>
                         </div>
@@ -758,7 +946,7 @@
         </div>
     </div>
     
-    <div class="page">
+    <div class="section content">
         <div class="container">
             <div class="container__row">
                 <div class="container__row__div">
@@ -800,10 +988,10 @@
 
             <div class="tab__container">
                 <div class="tab__div">
-                    <p class="tab tab--active text--24">
+                    <p class="tab tab--active text--24" id="contribution">
                         Contribution
                     </p>
-                    <p class="tab text--24">
+                    <p class="tab text--24" id="featured-interview">
                         Featured Interview
                     </p>
                 </div>
@@ -813,9 +1001,9 @@
             </div>
     
             <div>
-                <div class="tabcard__container mobile--c">
+                <div class="tabcard__container mobile--c tab__elements">
 
-                    <div class="tabcard">
+                    <div class="tabcard" id="contribution">
                         <img class="tabcard__img" src="/assets/Contribution-1.png" alt="">
                         <div class="tabcard__div">
                             <div class="tabcard__content">
@@ -840,7 +1028,7 @@
                         </div>
                     </div>
 
-                    <div class="tabcard">
+                    <div class="tabcard none" id="featured-interview">
                         <img class="tabcard__img" src="/assets/Contribution-2.png" alt="">
                         <div class="tabcard__div">
                             <div class="tabcard__content">
@@ -865,7 +1053,7 @@
                         </div>
                     </div>
 
-                    <div class="tabcard">
+                    <div class="tabcard" id="contribution">
                         <img class="tabcard__img" src="/assets/Contribution-3.png" alt="">
                         <div class="tabcard__div">
                             <div class="tabcard__content">
@@ -894,7 +1082,7 @@
         </div>
     </div>
 
-    <div class="widget">
+    <div class="section widget">
         <div class="widget__container">
             <h2 class="text--32">
                 What was your contribution<br>
@@ -911,7 +1099,7 @@
         </div>
     </div>
 
-    <div class="page">
+    <div class="section content">
         <div class="container">
             <div class="container__row">
                 <div class="container__row__div">
@@ -927,10 +1115,10 @@
                 </div>
                 <div class="container__row__div">
                     <div class="facts">
-                        <div>
+                        <div id="fact-1">
                             <img src="/assets/opening_commas.png" alt="" class="facts__opening">
                             <p class="text--24">
-                                Try to enjoy doing everything you do. When you are interested in what you do, you enjoy doing it. To be interested in what you do, you must try to do it better and better.  In progress lies try joy.
+                                When colors mix they become muddy and messy. But when they all blend together, the final result is the color that wins against all others… Black!
                             </p>
                             <img src="/assets/ending__commas.png" alt="" class="facts__ending">
                         </div>
@@ -954,7 +1142,7 @@
         </div>
     </div>
 
-    <div class="widget">
+    <div class="section widget">
         <div class="widget__container">
             <h2 class="text--32">
                 Got an Interesting fact to<br>
@@ -971,115 +1159,129 @@
         </div>
     </div>
     
-    <div class="footer__banner">
-        <img class="desktop" src="/assets/footer_banner.svg" alt="">
-        <img class="mobile" src="/assets/footer_banner_mobile.svg" alt="">
-    </div>
-    
-    <footer class="footer">
-        <div class="footer__grid">
-            <div class="footer__div mobile--r">
-                <ul class="text--14">
-                    <h4 class="text--16">
-                        Need help?
-                    </h4>
-                    <li>
-                        Got Questions?
-                    </li>
-                    <li>
-                        Call Us: +91 9889888895
-                    </li>
-                    <li>
-                        Email Us: info@sas.org
-                    </li>
-                    <li>
-                        Inspirational Gifts
-                    </li>
-                </ul>
-                <ul class="text--14">
-                    <h4 class="text--16">
-                        Quick Links
-                    </h4>
-                    <li>
-                        Your Account
-                    </li>
-                    <li>
-                        Activities
-                    </li>
-                    <li>
-                        Blog
-                    </li>
-                </ul>
-            </div>
-            <ul class="text--14">
-                <h4 class="text--16">
-                    Svarnim Puducherry
-                </h4>
-                <li>
-                    About Us
-                </li>
-                <li>
-                    Careers
-                </li>
-                <li>
-                    Terms Of Use
-                </li>
-                <li>
-                    Privacy Statement
-                </li>
-                <li>
-                    Give us Feedback
-                </li>
-                <li>
-                    Partner With Us
-                </li>
-            </ul>
-            <ul class="text--14">
-                <h4 class="text--16">
-                    Other Services & Support
-                </h4>
-                <li>
-                    Rewards Program
-                </li>
-                <li>
-                    Partners
-                </li>
-                <li>
-                    Legal
-                </li>
-                <li>
-                    Privacy Policy
-                </li>
-                <li>
-                    Customer Service help
-                </li>
-            </ul>
-            <div class="footer__div">
-                <ul class="text--14">
-                    <h4 class="text--16">
-                        Newsletter
-                    </h4>
-                    <li>
-                        Sign Up for our mailing lists and get the latest news straight in your inbox.
-                    </li>
-                    <input class="footer__input" type="email" placeholder="Enter your email">
-                    <button class="btn_primary footer__btn">
-                        Subscribe
-                    </button>
-                </ul> 
-                <ul class="text--14">
-                    <h4 class="text--16">
-                        Contact Info
-                    </h4>
-                    <li>
-                        Society House No. 11, St. Martin Street Puducherry - 605001, India
-                    </li>
-                </ul> 
-            </div>
+    <footer class="footer">     
+        <div class="footer__banner">
+            <img class="desktop" src="/assets/footer_banner.svg" alt="">
+            <img class="mobile" src="/assets/footer_banner_mobile.svg" alt="">
         </div>
-        <p class="footer__bottom text--14">
-            Copyright © 2021 Sri Aurobindo Society. All Rights Reserved
-        </p>
+
+        <div class="footer__content">
+            <div class="footer__grid text--14">
+
+                <div class="footer__column mobile--r">
+                    <ul>
+                        <h4 class="text--16">
+                            Need help?
+                        </h4>
+                        <a>
+                            Got Questions?
+                        </a>
+                        <a>
+                            Call Us: +91 9889888895
+                        </a>
+                        <a>
+                            Email Us: info@sas.org
+                        </a>
+                        <a>
+                            Inspirational Gifts
+                        </a>
+                    </ul>
+                    <ul>
+                        <h4 class="text--16">
+                            Quick Links
+                        </h4>
+                        <a>
+                            Your Account
+                        </a>
+                        <a>
+                            Activities
+                        </a>
+                        <a>
+                            Blog
+                        </a>
+                    </ul>
+                </div>
+
+                <div class="footer__column">
+                    <ul>
+                        <h4 class="text--16">
+                            Svarnim Puducherry
+                        </h4>
+                        <a>
+                            About Us
+                        </a>
+                        <a>
+                            Careers
+                        </a>
+                        <a>
+                            Terms Of Use
+                        </a>
+                        <a>
+                            Privacy Statement
+                        </a>
+                        <a>
+                            Give us Feedback
+                        </a>
+                        <a>
+                            Partner With Us
+                        </a>
+                    </ul>
+                </div>
+
+                <div class="footer__column">
+                    <ul>
+                        <h4 class="text--16">
+                            Other Services & Support
+                        </h4>
+                        <a>
+                            Rewards Program
+                        </a>
+                        <a>
+                            Partners
+                        </a>
+                        <a>
+                            Legal
+                        </a>
+                        <a>
+                            Privacy Policy
+                        </a>
+                        <a>
+                            Customer Service help
+                        </a>
+                    </ul>
+                </div>
+
+                <div class="footer__column">
+                    <ul>
+                        <h4 class="text--16">
+                            Newsletter
+                        </h4>
+                        <li>
+                            Sign Up for our mailing lists and get the latest news straight in your inbox.
+                        </li>
+                        <input class="footer__input" type="email" placeholder="Enter your email">
+                        <button class="btn_primary footer__btn">
+                            Subscribe
+                        </button>
+                    </ul> 
+                    <ul>
+                        <h4 class="text--16">
+                            Contact Info
+                        </h4>
+                        <li>
+                            Society House No. 11, St. Martin Street Puducherry - 605001, India
+                        </li>
+                    </ul> 
+                </div>
+
+            </div>
+
+            <p class="footer__bottom text--14">
+                Copyright © 2021 Sri Aurobindo Society. All Rights Reserved
+            </p>
+        </div>
     </footer>
+
+    <script src="/javascript/main.js"></script>
 </body>
 </html>

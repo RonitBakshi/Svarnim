@@ -15,13 +15,23 @@ $yellow: #FEDC2A;
 $max-width: 500px;
 $box-shadow: 0px 2px 8px #000A1814;
 
+.none {
+    display: none;
+}
+
 h1,h2 {
     font-family: 'Lora', serif;
     font-style: normal;
+    margin: 0;
+    padding: 0;
 }
 
 li {
     list-style: none;
+}
+
+a {
+    cursor: pointer;
 }
 
 .desktop {
@@ -43,10 +53,15 @@ li {
         line-height: 24px;
         color: $white;
         cursor: pointer;
+        transition: all 0.1s ease-in;
 
         &--inactive {
             background-color: $off-white;
             color: $navy-blue;
+        }
+
+        &:hover {
+            opacity: 0.8;
         }
     }
 
@@ -61,6 +76,12 @@ li {
         line-height: 24px;
         background: none;
         cursor: pointer;
+        transition: all 0.02s ease-in;
+
+        &:hover {
+            background-color: $navy-blue;
+            color: $white;
+        }
     }
 
     &_text {
@@ -74,7 +95,7 @@ li {
     }
 }
 
-*  {
+* {
     margin: 0;
     padding: 0;
     font-family: 'Mulish', sans-serif;
@@ -246,13 +267,19 @@ nav {
     }
 }
 
-.page {
+.section {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-left: 16px;
+    padding-right: 16px; 
+}
+
+.content {
     gap: 167px;
-    padding: 80px 16px;
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
 
 .container {
@@ -290,11 +317,11 @@ nav {
         display: grid;
         grid-auto-flow: column;
         padding: 4px 0px;
+        gap: 30px;
         overflow-x: auto;
         overscroll-behavior-x: contain;
         scroll-snap-type: x mandatory;
         scroll-behavior: smooth;
-        gap: 30px;
         -ms-overflow-style: none;
         scrollbar-width: none;
 
@@ -308,12 +335,19 @@ nav {
         justify-content: space-between;
     }
 
-    &__no {
-        font-size: 40px;
-        color: $off-white;
+    &__indicator {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    &__li {
+        height: 3px;
+        width: 40px;
+        background-color: $off-white;
 
         &--active {
-            color: $navy-blue;
+            background-color: $navy-blue;
         }
     }
 
@@ -334,8 +368,9 @@ nav {
     width: 350px;
 
     img {
+        object-fit: cover;
         min-height: 262px;
-        width: 350px;
+        width: 100%;
         margin-bottom: 16px;
         font-size: 20px;
         line-height: 32px;
@@ -374,19 +409,19 @@ nav {
 }
 
 .widget {
-    width: 100%;
+    width: 100%; //same
     background-image: url("/assets/widget-background.svg");
     background-size: cover;
     background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+    display: flex; //same
+    align-items: center; //same
+    justify-content: center; //same
+    padding-top: 64px;
+    padding-bottom: 64px;
 
     &__container {
         max-width: 1112px;
         width: 100%;
-        margin: 64px 16px;
         display: flex;
         flex-direction: column;
         gap: 16px;
@@ -431,7 +466,7 @@ nav {
 
 .tabcard {
     height: 100%;
-    width: 350px;
+    width: calc(100%/3);
     box-shadow: $box-shadow;
 
     &__container {
@@ -447,7 +482,8 @@ nav {
 
     &__img {
         min-height: 262px;
-        width: 350px;
+        width: 100%;
+        object-fit: cover;
         font-size: 20px;
         line-height: 32px;
     }
@@ -489,6 +525,34 @@ nav {
     &__opening {
         height: 35px;
         margin-bottom: 13px;
+    }
+
+    &__fadein {
+        animation: fadein 4s forwards ease-in;
+    }
+
+    &__fadeout {
+        animation: fadeout 4s forwards ease-out;
+    }
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    } 
+}
+
+@keyframes fadeout {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
 
@@ -559,12 +623,15 @@ nav {
 }
 
 .footer {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    background-color: $light-blue;
-    padding-inline: 16px;
-    color: $white;
+    
+    &__content {  
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-color: $light-blue;
+        padding-inline: 16px;
+        color: $white;
+    }
 
     &__banner {
         position: relative;
@@ -588,7 +655,7 @@ nav {
         border-bottom: 1px solid $footer-grey;
     }
 
-    &__div {
+    &__column {
         display: flex;
         flex-direction: column;
         gap: 40px;
@@ -608,12 +675,18 @@ nav {
     &__input {
         height: 40px;
         padding: 16px 10px;
+        border: none;
+        background: $white;
 
         &::placeholder {
             font-family: 'Mulish', sans-serif;
             font-size: 14px;
             font-weight: 400;
             line-height: 20px;
+        }
+
+        &:focus {
+            outline: none;
         }
     }
 
@@ -783,6 +856,7 @@ nav {
             font-weight: 700;
             line-height: 20px;
             color: $grey;
+            text-align: center;
         }
 
         &__date {
@@ -791,6 +865,7 @@ nav {
             font-size: 14px;
             font-weight: 400;
             line-height: 20px;
+            text-align: center;
 
             &--active {
                 background-color: $navy-blue;
@@ -916,8 +991,9 @@ nav {
         }
     }
 
-    .page {
-        padding: 48px 16px;
+    .content {
+        padding-top: 48px;
+        padding-bottom: 48px;
         gap: 96px;
     }
 
@@ -941,11 +1017,17 @@ nav {
         }
     }
 
+    .scroll {
+        &__container {
+            gap: 16px;
+        }
+    }
+
     .scrollcard {
         width: 242px;
+        scroll-snap-align: none;
     
         img {
-            width: 242px;
             min-height: 181px;
         }
     }
@@ -967,10 +1049,8 @@ nav {
     }
 
     .widget {
-    
-        &__container {
-            margin: 56px 16px;
-        }
+        padding-top: 56px;
+        padding-bottom: 56px;
     
         &__content {
             align-items: flex-start;
@@ -984,11 +1064,15 @@ nav {
     }
 
     .bulletincard {
+        scroll-snap-align: none;
         width: 242px;
         padding: 16px;
     }
 
     .tabcard {
+        width: 100%;
+        max-width: 500px;
+
         &__container {
             align-items: center;
             gap: 24px;

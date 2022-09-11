@@ -1,10 +1,20 @@
+.none {
+  display: none;
+}
+
 h1, h2 {
   font-family: "Lora", serif;
   font-style: normal;
+  margin: 0;
+  padding: 0;
 }
 
 li {
   list-style: none;
+}
+
+a {
+  cursor: pointer;
 }
 
 .desktop {
@@ -25,10 +35,14 @@ li {
   line-height: 24px;
   color: white;
   cursor: pointer;
+  transition: all 0.1s ease-in;
 }
 .btn_primary--inactive {
   background-color: #F0F5FB;
   color: #0451C4;
+}
+.btn_primary:hover {
+  opacity: 0.8;
 }
 .btn_secondary {
   padding: 12px 16.5px;
@@ -41,6 +55,11 @@ li {
   line-height: 24px;
   background: none;
   cursor: pointer;
+  transition: all 0.02s ease-in;
+}
+.btn_secondary:hover {
+  background-color: #0451C4;
+  color: white;
 }
 .btn_text {
   border: none;
@@ -202,13 +221,19 @@ nav li {
   margin-bottom: 40px;
 }
 
-.page {
+.section {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.content {
   gap: 167px;
-  padding: 80px 16px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 .container {
@@ -244,12 +269,12 @@ nav li {
   display: grid;
   grid-auto-flow: column;
   padding: 4px 0px;
+  gap: 30px;
   overflow-x: auto;
   overscroll-behavior-x: contain;
   -ms-scroll-snap-type: x mandatory;
       scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  gap: 30px;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -260,12 +285,18 @@ nav li {
   display: flex;
   justify-content: space-between;
 }
-.scroll__no {
-  font-size: 40px;
-  color: #F0F5FB;
+.scroll__indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
-.scroll__no--active {
-  color: #0451C4;
+.scroll__li {
+  height: 3px;
+  width: 40px;
+  background-color: #F0F5FB;
+}
+.scroll__li--active {
+  background-color: #0451C4;
 }
 .scroll__btndiv {
   display: flex;
@@ -282,8 +313,10 @@ nav li {
   width: 350px;
 }
 .scrollcard img {
+  -o-object-fit: cover;
+     object-fit: cover;
   min-height: 262px;
-  width: 350px;
+  width: 100%;
   margin-bottom: 16px;
   font-size: 20px;
   line-height: 32px;
@@ -324,11 +357,12 @@ nav li {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 64px;
+  padding-bottom: 64px;
 }
 .widget__container {
   max-width: 1112px;
   width: 100%;
-  margin: 64px 16px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -366,7 +400,7 @@ nav li {
 
 .tabcard {
   height: 100%;
-  width: 350px;
+  width: 33.3333333333%;
   box-shadow: 0px 2px 8px rgba(0, 10, 24, 0.0784313725);
 }
 .tabcard__container {
@@ -380,7 +414,9 @@ nav li {
 }
 .tabcard__img {
   min-height: 262px;
-  width: 350px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   font-size: 20px;
   line-height: 32px;
 }
@@ -418,7 +454,48 @@ nav li {
   height: 35px;
   margin-bottom: 13px;
 }
+.facts__fadein {
+  -webkit-animation: fadein 4s forwards ease-in;
+          animation: fadein 4s forwards ease-in;
+}
+.facts__fadeout {
+  -webkit-animation: fadeout 4s forwards ease-out;
+          animation: fadeout 4s forwards ease-out;
+}
 
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fadeout {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeout {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .tag {
   min-width: -webkit-max-content;
   min-width: -moz-max-content;
@@ -482,7 +559,7 @@ nav li {
   border-bottom: 1px solid #D1D3D5;
 }
 
-.footer {
+.footer__content {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -511,7 +588,7 @@ nav li {
   padding-bottom: 144px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.54);
 }
-.footer__div {
+.footer__column {
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -528,6 +605,8 @@ nav li {
 .footer__input {
   height: 40px;
   padding: 16px 10px;
+  border: none;
+  background: white;
 }
 .footer__input::-moz-placeholder {
   font-family: "Mulish", sans-serif;
@@ -546,6 +625,9 @@ nav li {
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
+}
+.footer__input:focus {
+  outline: none;
 }
 .footer__btn {
   width: 100%;
@@ -691,6 +773,7 @@ nav li {
   font-weight: 700;
   line-height: 20px;
   color: #80848B;
+  text-align: center;
 }
 .calender__table__date {
   width: 42px;
@@ -698,6 +781,7 @@ nav li {
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
+  text-align: center;
 }
 .calender__table__date--active {
   background-color: #0451C4;
@@ -787,8 +871,9 @@ nav li {
   .banner__container {
     padding-top: 40px;
   }
-  .page {
-    padding: 48px 16px;
+  .content {
+    padding-top: 48px;
+    padding-bottom: 48px;
     gap: 96px;
   }
   .container {
@@ -806,11 +891,14 @@ nav li {
     width: 100%;
     max-width: 500px;
   }
+  .scroll__container {
+    gap: 16px;
+  }
   .scrollcard {
     width: 242px;
+    scroll-snap-align: none;
   }
   .scrollcard img {
-    width: 242px;
     min-height: 181px;
   }
   .contributor {
@@ -826,8 +914,9 @@ nav li {
     height: 72px;
     width: 72px;
   }
-  .widget__container {
-    margin: 56px 16px;
+  .widget {
+    padding-top: 56px;
+    padding-bottom: 56px;
   }
   .widget__content {
     align-items: flex-start;
@@ -838,8 +927,13 @@ nav li {
     max-height: 48px;
   }
   .bulletincard {
+    scroll-snap-align: none;
     width: 242px;
     padding: 16px;
+  }
+  .tabcard {
+    width: 100%;
+    max-width: 500px;
   }
   .tabcard__container {
     align-items: center;
